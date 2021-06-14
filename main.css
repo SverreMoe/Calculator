@@ -1,0 +1,107 @@
+.calc-container{
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: 33,33% 33,33% 33,33%;
+    grid-template-areas:
+    "screen screen screen "
+    "input input input"
+    ;
+    width: 400px;
+    height: auto;
+    background-color:rgba(211,211,211, 0.8);
+    margin: 0 auto;
+    padding-top: 2vh;
+    border-radius: 5px;
+    margin-top: 30px
+}
+.screen{
+    grid-area: screen;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.input{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "seven eight nine divide"
+    "four five six times"
+    "one two three sub"
+    "zero dot equals add"
+    ". clear clear ."
+    ;
+    grid-area: input;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+#textinput{
+    margin: 0;
+    padding: 0;
+    float:right;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+}
+
+/* Changing calculator position */
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+
+.nine{
+    grid-area: nine;
+}
+.divide {
+    grid-area: divide;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.times{
+    grid-area: times; 
+}
+
+.one{
+    grid-area:one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.sub{
+    grid-area: sub;
+}
+
+.clear{
+    grid-area: clear;
+    width: 100px;
+}
+
+/* "seven eight nine divide"
+"four five six times"
+"one two three sub"
+"zero dot equals add" */
