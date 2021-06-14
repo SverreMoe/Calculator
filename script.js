@@ -52,6 +52,15 @@ function addToScreen(str) {
 
 }
 
+function reset(){
+    currentNum = '';
+    operator = '';
+    sum = 0;
+    screenArr = [];
+    preNum = null;
+    addToScreen(0);
+}
+
 function operate(e) {
     if (preNum == null) {
         preNum = currentNum;
@@ -81,14 +90,9 @@ btnOp.forEach(el => {
 })
 
 equals.addEventListener('click', (e) => {
-    addToScreen(calculate(operator, parseInt(preNum), parseInt(currentNum)))
+    addToScreen(calculate(operator, parseFloat(preNum), parseFloat(currentNum)))
 })
 
 clear.addEventListener('click', (e) => {
-    currentNum = '';
-    operator = '';
-    sum = 0;
-    screenArr = [];
-    preNum = null;
-    addToScreen(0);
+    reset();
 })
